@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services - Sound Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="applyLanguage()">
+  <header>
+    <div class="language-switcher">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ms')">Malay</button>
+    </div>
+    <h1 data-en="Sound Library Services" data-ms="Perkhidmatan Perpustakaan Bunyi">Sound Library Services</h1>
+    <nav>
+      <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
+      <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
+      <a href="activities.html" data-en="Activities" data-ms="Aktiviti">Activities</a>
+      <a href="technology.html" data-en="Technology" data-ms="Teknologi">Technology</a>
+      <a href="workshops.html" data-en="Workshops" data-ms="Bengkel">Workshops</a>
+      <a href="contact.html" data-en="Contact" data-ms="Hubungi">Contact</a>
+      <a href="donate.html" data-en="Donate" data-ms="Derma">Donate</a>
+      <a href="membership.html" data-en="Membership" data-ms="Keahlian">Membership</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 data-en="Our Core Services" data-ms="Perkhidmatan Teras Kami">Our Core Services</h2>
+    <ul>
+      <li data-en="Audio lending services" data-ms="Perkhidmatan peminjaman audio">Audio lending services</li>
+      <li data-en="Sound recording booths" data-ms="Ruang rakaman bunyi">Sound recording booths</li>
+      <li data-en="Audio digitization and preservation" data-ms="Pendigitalan dan pemeliharaan audio">Audio digitization and preservation</li>
+      <li data-en="Personalized sound curation" data-ms="Kurasi bunyi peribadi">Personalized sound curation</li>
+      <li data-en="Mobile listening lounges" data-ms="Lounge pendengaran mudah alih">Mobile listening lounges</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p data-en="&copy; 2025 Sound Library. All rights reserved." 
+       data-ms="&copy; 2025 Perpustakaan Bunyi. Hak cipta terpelihara.">
+       &copy; 2025 Sound Library. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem("lang", lang);
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const lang = localStorage.getItem("lang") || "en";
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
+</body>
+</html>
