@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sound Library - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .librarians {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .librarian {
+      background: #2C3E50;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .librarian img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .language-switcher {
+      text-align: right;
+      padding: 10px;
+    }
+
+    .language-switcher button {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="language-switcher">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ms')">Malay</button>
+    </div>
+    <h1 data-en="Sound Library" data-ms="Perpustakaan Bunyi">Sound Library</h1>
+    <nav>
+      <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
+      <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
+      <a href="activities.html" data-en="Activities" data-ms="Aktiviti">Activities</a>
+      <a href="technology.html" data-en="Technology" data-ms="Teknologi">Technology</a>
+      <a href="workshops.html" data-en="Workshops" data-ms="Bengkel">Workshops</a>
+      <a href="contact.html" data-en="Contact" data-ms="Hubungi">Contact</a>
+      <a href="donate.html" data-en="Donate" data-ms="Derma">Donate</a>
+      <a href="membership.html" data-en="Membership" data-ms="Keahlian">Membership</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 data-en="Welcome to the Sound Library" data-ms="Selamat Datang ke Perpustakaan Bunyi">Welcome to the Sound Library</h2>
+    <p data-en="Explore a unique collection of audio resources to enhance your learning and entertainment experiences."
+       data-ms="Terokai koleksi sumber audio yang unik untuk meningkatkan pengalaman pembelajaran dan hiburan anda.">
+      Explore a unique collection of audio resources to enhance your learning and entertainment experiences.
+    </p>
+
+    <section class="librarians">
+      <div class="librarian">
+        <img src="https://via.placeholder.com/150" alt="Librarian 1">
+        <p data-en="Librarian A" data-ms="Pustakawan A">Librarian A</p>
+      </div>
+      <div class="librarian">
+        <img src="https://via.placeholder.com/150" alt="Librarian 2">
+        <p data-en="Librarian B" data-ms="Pustakawan B">Librarian B</p>
+      </div>
+      <div class="librarian">
+        <img src="https://via.placeholder.com/150" alt="Librarian 3">
+        <p data-en="Librarian C" data-ms="Pustakawan C">Librarian C</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-en="&copy; 2025 Sound Library. All rights reserved."
+       data-ms="&copy; 2025 Perpustakaan Bunyi. Hak cipta terpelihara.">
+      &copy; 2025 Sound Library. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerHTML = el.getAttribute(`data-${lang}`);
+      });
+    }
+
+    window.onload = function() {
+      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+      setLanguage(savedLang);
+    };
+  </script>
+</body>
+</html>
