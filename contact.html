@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact - Sound Library</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="language.js" defer></script>
 </head>
 <body>
   <header>
@@ -12,7 +13,10 @@
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('ms')">Malay</button>
     </div>
-    <h1 data-en="Sound Library" data-ms="Perpustakaan Bunyi">Sound Library</h1>
+    <a href="index.html">
+      <img src="https://i.postimg.cc/1zjLbBx4/photo-2025-06-25-11-02-57.jpg" alt="Sound Library Logo" class="library-logo" />
+    </a>
+    <h1 data-en="Contact" data-ms="Hubungi">Contact</h1>
     <nav>
       <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
       <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
@@ -32,7 +36,7 @@
       Have questions or feedback? Reach out to us below!
     </p>
 
-    <form>
+      <form action="https://formspree.io/f/xovwyvoz" method="POST">
       <label for="name" data-en="Name:" data-ms="Nama:">Name:</label>
       <input type="text" id="name" name="name" required placeholder="John Doe" />
 
@@ -62,19 +66,5 @@
       &copy; 2025 Sound Library. All rights reserved.
     </p>
   </footer>
-
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem('language', lang);
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
-      });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      const lang = localStorage.getItem('language') || 'en';
-      setLanguage(lang);
-    });
-  </script>
 </body>
 </html>
