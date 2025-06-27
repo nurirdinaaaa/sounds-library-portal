@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Membership - Sound Library</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="language.js" defer></script>
   <style>
     .language-switcher {
       text-align: right;
@@ -53,7 +54,10 @@
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('ms')">Malay</button>
     </div>
-    <h1 data-en="Sound Library" data-ms="Perpustakaan Bunyi">Sound Library</h1>
+    <a href="index.html">
+      <img src="https://i.postimg.cc/1zjLbBx4/photo-2025-06-25-11-02-57.jpg" alt="Sound Library Logo" class="library-logo" />
+    </a>
+    <h1 data-en="Membership" data-ms="Keahlian">Membership</h1>
     <nav>
       <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
       <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
@@ -73,22 +77,21 @@
       Fill in the form below to join Sound Library and enjoy exclusive access to audio collections and workshops.
     </p>
 
-   <form action="https://formspree.io/f/xrbkykly" method="POST" style="background-color: #2C3E50; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-  <label for="name" data-en="Full Name" data-ms="Nama Penuh">Full Name</label>
-  <input type="text" id="name" name="name" required>
+    <form action="https://formspree.io/f/xrbkykly" method="POST">
+      <label for="name" data-en="Full Name" data-ms="Nama Penuh">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-  <label for="email" data-en="Email Address" data-ms="Alamat Emel">Email Address</label>
-  <input type="email" id="email" name="email" required>
+      <label for="email" data-en="Email Address" data-ms="Alamat Emel">Email Address</label>
+      <input type="email" id="email" name="email" required>
 
-  <label for="phone" data-en="Phone Number" data-ms="Nombor Telefon">Phone Number</label>
-  <input type="text" id="phone" name="phone">
+      <label for="phone" data-en="Phone Number" data-ms="Nombor Telefon">Phone Number</label>
+      <input type="text" id="phone" name="phone">
 
-  <label for="reason" data-en="Why do you want to join?" data-ms="Mengapa anda ingin menyertai?">Why do you want to join?</label>
-  <textarea id="reason" name="reason" rows="4" required></textarea>
+      <label for="reason" data-en="Why do you want to join?" data-ms="Mengapa anda ingin menyertai?">Why do you want to join?</label>
+      <textarea id="reason" name="reason" rows="4" required></textarea>
 
-  <button type="submit" data-en="Submit Membership" data-ms="Hantar Keahlian">Submit Membership</button>
-</form>
-
+      <button type="submit" data-en="Submit Membership" data-ms="Hantar Keahlian">Submit Membership</button>
+    </form>
   </main>
 
   <footer>
@@ -97,19 +100,5 @@
        &copy; 2025 Sound Library. All rights reserved.
     </p>
   </footer>
-
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem('lang', lang);
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
-      });
-    }
-
-    window.onload = function() {
-      const savedLang = localStorage.getItem('lang') || 'en';
-      setLanguage(savedLang);
-    }
-  </script>
 </body>
 </html>
