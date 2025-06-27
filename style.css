@@ -1,4 +1,6 @@
-/* Universal Reset and Base Font */
+/* ===================================
+   UNIVERSAL RESET & BASE TYPOGRAPHY
+=================================== */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +20,9 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
-/* Skip link for accessibility */
+/* ===================================
+   ACCESSIBILITY
+=================================== */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -33,7 +37,9 @@ body {
   top: 10px;
 }
 
-/* Header */
+/* ===================================
+   HEADER & NAVIGATION
+=================================== */
 header {
   background-color: #74A7B7;
   color: #ECF0F1;
@@ -49,9 +55,23 @@ header h1 {
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
 }
 
+.library-logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.library-logo:hover {
+  transform: scale(1.05);
+}
+
 /* Navigation */
 nav {
   margin-top: 10px;
+  text-align: center;
 }
 
 nav ul {
@@ -83,7 +103,9 @@ nav a.active {
   text-shadow: 0 2px 5px rgba(93, 139, 158, 0.8);
 }
 
-/* Main Content */
+/* ===================================
+   MAIN CONTENT
+=================================== */
 main {
   max-width: 900px;
   margin: 30px auto;
@@ -116,13 +138,22 @@ li {
   margin-bottom: 10px;
 }
 
-/* Forms */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   FORMS & INPUTS
+=================================== */
 form {
   margin-top: 20px;
 }
 
 input[type="text"],
 input[type="email"],
+input[type="number"],
+input[type="file"],
 textarea {
   width: 100%;
   padding: 10px;
@@ -152,6 +183,16 @@ textarea:invalid {
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
 }
 
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #BDC3C7;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
 button,
 button[type="submit"] {
   background-color: #74A7B7;
@@ -171,7 +212,21 @@ button:focus {
   box-shadow: 0 8px 16px rgba(93, 139, 158, 0.4);
 }
 
-/* Language Switcher */
+.donate-button {
+  background-color: #74A7B7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ===================================
+   LANGUAGE SWITCHER
+=================================== */
 .language-switcher {
   text-align: right;
   margin-bottom: 10px;
@@ -194,7 +249,44 @@ button:focus {
   background-color: #74A7B7;
 }
 
-/* Footer */
+/* ===================================
+   CHAT BOX & POPUP
+=================================== */
+#chatBox {
+  display: none;
+  background-color: #34495E;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2ECC71;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Donation Image */
+.donation-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+/* ===================================
+   FOOTER
+=================================== */
 footer {
   text-align: center;
   margin-top: 40px;
@@ -203,7 +295,9 @@ footer {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Scrollbar styling for modern browsers */
+/* ===================================
+   SCROLLBAR STYLING
+=================================== */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -215,7 +309,9 @@ footer {
   border-radius: 10px;
 }
 
-/* Responsive Design */
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -233,4 +329,80 @@ footer {
   .language-switcher {
     text-align: center;
   }
+.library-logo {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
 }
+
+}
+/*librarian*/
+.librarians {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+.librarian {
+  background-color: #2C3E50;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.librarian img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-bottom: 10px;
+}
+
+.intro {
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+/*audio.books*/
+.audiobook {
+  margin-bottom: 1.5em;
+}
+.music-collection {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.music-collection h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.music-item {
+  margin-bottom: 30px;
+}
+
+.music-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.music-item p {
+  margin-bottom: 10px;
+  color: #444;
+}
+.music-collection h2,
+.music-collection h3,
+.music-collection p {
+  color: #222 !important;
+}
+
+
