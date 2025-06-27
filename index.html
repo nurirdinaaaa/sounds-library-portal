@@ -5,40 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sound Library - Home</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .librarians {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 30px;
-    }
-
-    .librarian {
-      background: #2C3E50;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      width: 200px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    .librarian img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-
-    .language-switcher {
-      text-align: right;
-      padding: 10px;
-    }
-
-    .language-switcher button {
-      margin-left: 5px;
-    }
-  </style>
+  <script src="language.js" defer></script>
 </head>
 <body>
   <header>
@@ -46,7 +13,10 @@
       <button onclick="setLanguage('en')">English</button>
       <button onclick="setLanguage('ms')">Malay</button>
     </div>
-    <h1 data-en="Sound Library" data-ms="Perpustakaan Bunyi">Sound Library</h1>
+    <a href="index.html">
+      <img src="https://i.postimg.cc/1zjLbBx4/photo-2025-06-25-11-02-57.jpg" alt="Sound Library Logo" class="library-logo" />
+    </a>
+    <h1 data-en="Home" data-ms="Laman Utama">Home</h1>
     <nav>
       <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
       <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
@@ -60,24 +30,61 @@
   </header>
 
   <main>
-    <h2 data-en="Welcome to the Sound Library" data-ms="Selamat Datang ke Perpustakaan Bunyi">Welcome to the Sound Library</h2>
-    <p data-en="Explore a unique collection of audio resources to enhance your learning and entertainment experiences."
-       data-ms="Terokai koleksi sumber audio yang unik untuk meningkatkan pengalaman pembelajaran dan hiburan anda.">
-      Explore a unique collection of audio resources to enhance your learning and entertainment experiences.
+    <section class="intro">
+      <h2 data-en="Welcome to the Sound Library" data-ms="Selamat Datang ke Perpustakaan Bunyi">
+        Welcome to the Sound Library
+      </h2>
+      <p data-en="Explore a unique collection of audio resources to enhance your learning and entertainment experiences."
+         data-ms="Terokai koleksi sumber audio yang unik untuk meningkatkan pengalaman pembelajaran dan hiburan anda.">
+        Explore a unique collection of audio resources to enhance your learning and entertainment experiences.
+      </p>
+    </section>
+<section class="music-collection">
+  <h2 data-en="Featured Music Collection" data-ms="Koleksi Muzik Pilihan">Featured Music Collection</h2>
+
+  <div class="music-item">
+    <h3 data-en="Relaxing Library Music" data-ms="Muzik Santai di Perpustakaan">Relaxing Library Music</h3>
+    <p data-en="Background music for studying and relaxing." data-ms="Muzik latar untuk belajar dan bersantai.">
+      Background music for studying and relaxing.
     </p>
+    <iframe width="100%" height="150" src="https://www.youtube.com/embed/5qap5aO4i9A" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="music-item">
+    <h3 data-en="Focus Music for Deep Work" data-ms="Muzik Fokus untuk Kerja Mendalam">Focus Music for Deep Work</h3>
+    <p data-en="Boost your concentration with ambient focus tunes." data-ms="Tingkatkan tumpuan anda dengan muzik fokus.">
+      Boost your concentration with ambient focus tunes.
+    </p>
+    <iframe width="100%" height="150" src="https://www.youtube.com/embed/1ZYbU82GVz4" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="music-item">
+    <h3 data-en="Lo-Fi Chill Beats" data-ms="Lagu Chill Lo-Fi">Lo-Fi Chill Beats</h3>
+    <p data-en="Perfect background for reading or relaxing." data-ms="Latar belakang sesuai untuk membaca atau bersantai.">
+      Perfect background for reading or relaxing.
+    </p>
+    <iframe width="100%" height="150" src="https://www.youtube.com/embed/jfKfPfyJRdk" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe>
+  </div>
+</section>
 
     <section class="librarians">
       <div class="librarian">
-        <img src="https://via.placeholder.com/150" alt="Librarian 1">
-        <p data-en="Librarian A" data-ms="Pustakawan A">Librarian A</p>
+        <img src="https://i.postimg.cc/4xx6vHnb/photo-2025-06-25-21-26-49.jpg" alt="Librarian A">
+        <p data-en="Librarian Jessica" data-ms="Pustakawan Jessica">Librarian A</p>
       </div>
       <div class="librarian">
-        <img src="https://via.placeholder.com/150" alt="Librarian 2">
-        <p data-en="Librarian B" data-ms="Pustakawan B">Librarian B</p>
+        <img src="https://i.postimg.cc/MGTNMGyv/photo-2025-06-25-21-28-04.jpg" alt="Librarian B">
+        <p data-en="Librarian Hira" data-ms="Pustakawan Hira">Librarian Hira</p>
       </div>
       <div class="librarian">
-        <img src="https://via.placeholder.com/150" alt="Librarian 3">
-        <p data-en="Librarian C" data-ms="Pustakawan C">Librarian C</p>
+        <img src="https://i.postimg.cc/mDqs2HJL/LIBRARY-2.jpg" alt="Librarian C">
+        <p data-en="Librarian Aisyah" data-ms="Pustakawan Aisyah">Librarian C</p>
       </div>
     </section>
   </main>
@@ -88,19 +95,5 @@
       &copy; 2025 Sound Library. All rights reserved.
     </p>
   </footer>
-
-  <script>
-    function setLanguage(lang) {
-      localStorage.setItem('preferredLanguage', lang);
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
-      });
-    }
-
-    window.onload = function() {
-      const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-      setLanguage(savedLang);
-    };
-  </script>
 </body>
 </html>
