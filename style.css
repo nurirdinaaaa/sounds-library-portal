@@ -409,3 +409,13 @@ footer {
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
+h4 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #2c3e50; /* Boleh tukar ikut warna tema */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
