@@ -5,117 +5,21 @@
   <title>Donate - Sound Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css" />
+  <script src="language.js" defer></script>
   <style>
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
-    body {
-      background-color: #2C3E50;
-      color: #ECF0F1;
-      padding: 20px;
-    }
-
-    header, footer {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .language-switcher {
-      text-align: right;
-      margin-bottom: 15px;
-    }
-
-    .language-switcher button {
-      background-color: #5D8B9E;
-      color: #fff;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      margin-left: 5px;
-      cursor: pointer;
-    }
-
-    h1 {
-      color: #ECF0F1;
-      margin-bottom: 10px;
-    }
-
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .donate-button {
-      background-color: #74A7B7;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin: 20px auto;
-      display: block;
-    }
-
+    /* Sembunyikan borang pada permulaan */
     #chatBox {
       display: none;
-      background-color: #34495E;
-      padding: 20px;
-      border-radius: 10px;
       margin-top: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-      margin-bottom: 5px;
-      color: #BDC3C7;
-    }
-
-    input[type="text"],
-    input[type="number"],
-    input[type="file"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: 1px solid #7F8C8D;
-    }
-
-    button[type="submit"] {
-      background-color: #2ECC71;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
     }
 
     .popup {
       display: none;
-      position: fixed;
-      top: 30%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #2ECC71;
-      color: white;
-      padding: 20px 30px;
-      border-radius: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-      z-index: 999;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    .donation-image {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 30px;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -124,15 +28,21 @@
     <button onclick="setLanguage('en')">English</button>
     <button onclick="setLanguage('ms')">Bahasa Melayu</button>
   </div>
-<nav style="text-align: center; margin-bottom: 20px;">
-  <a href="index.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">Home</a>
-  <a href="about.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">About</a>
-  <a href="services.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">Services</a>
-  <a href="contact.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">Contact</a>
-  <a href="faq.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">FAQ</a>
-  <a href="donate.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">Donate</a>
-  <a href="membership.html" style="margin: 0 10px; color: #ECF0F1; text-decoration: none;">Membership</a>
-</nav>
+
+  <a href="index.html">
+    <img src="https://i.postimg.cc/1zjLbBx4/photo-2025-06-25-11-02-57.jpg" alt="Sound Library Logo" class="library-logo" />
+  </a>
+
+  <nav>
+    <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
+    <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
+    <a href="activities.html" data-en="Activities" data-ms="Aktiviti">Activities</a>
+    <a href="technology.html" data-en="Technology" data-ms="Teknologi">Technology</a>
+    <a href="workshops.html" data-en="Workshops" data-ms="Bengkel">Workshops</a>
+    <a href="contact.html" data-en="Contact" data-ms="Hubungi">Contact</a>
+    <a href="donate.html" data-en="Donate" data-ms="Derma">Donate</a>
+    <a href="membership.html" data-en="Membership" data-ms="Keahlian">Membership</a>
+  </nav>
 
   <header>
     <h1 data-en="Support Our Sound Library" data-ms="Sokong Perpustakaan Bunyi Kami">Support Our Sound Library</h1>
@@ -143,15 +53,12 @@
     <button class="donate-button" onclick="showChat()" data-en="Donate Now" data-ms="Derma Sekarang">Donate Now</button>
 
     <div id="chatBox">
-      <form>
+      <form action="https://formspree.io/f/xanjangd" method="POST" enctype="multipart/form-data">
         <label data-en="Full Name" data-ms="Nama Penuh">Full Name</label>
-        <input type="text" required>
+        <input type="text" name="name" required>
 
         <label data-en="Donation Amount (RM)" data-ms="Jumlah Derma (RM)">Donation Amount (RM)</label>
-        <input type="number" required min="1" step="0.01">
-
-        <label data-en="Bank-in Receipt (Upload Proof)" data-ms="Resit Bank-in (Muat Naik Bukti)">Bank-in Receipt (Upload Proof)</label>
-        <input type="file" id="receipt" accept="image/*,application/pdf" required>
+        <input type="number" name="amount" required min="1" step="0.01">
 
         <label data-en="Library Account Number (for your transfer): 1234567890 - Sound Library" 
                data-ms="Nombor Akaun Perpustakaan (untuk pemindahan anda): 1234567890 - Sound Library">
@@ -161,8 +68,6 @@
         <button type="submit" data-en="Submit Donation" data-ms="Hantar Derma">Submit Donation</button>
       </form>
     </div>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Malaysia_Library.jpg" alt="Library Image" class="donation-image">
   </div>
 
   <div id="popup" class="popup">✅ Your proof of donation has been received. Thank you!</div>
@@ -175,39 +80,13 @@
 
   <script>
     function showChat() {
-      document.getElementById('chatBox').style.display = 'block';
-    }
-
-    function setLanguage(lang) {
-      localStorage.setItem('language', lang);
-      translatePage();
-    }
-
-    function translatePage() {
-      const lang = localStorage.getItem('language') || 'en';
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
-      });
-    }
-
-    // Show popup on file upload
-    document.addEventListener('DOMContentLoaded', function () {
-      translatePage();
-
-      const receiptInput = document.getElementById('receipt');
-      const popup = document.getElementById('popup');
-
-      if (receiptInput) {
-        receiptInput.addEventListener('change', function () {
-          if (receiptInput.files.length > 0) {
-            popup.style.display = 'block';
-            setTimeout(() => {
-              popup.style.display = 'none';
-            }, 4000);
-          }
-        });
+      const chatBox = document.getElementById("chatBox");
+      if (chatBox.style.display === "none" || chatBox.style.display === "") {
+        chatBox.style.display = "block";
+      } else {
+        chatBox.style.display = "none";
       }
-    });
+    }
   </script>
 </body>
 </html>
