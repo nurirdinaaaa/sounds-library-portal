@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Sound Library</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="language.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="language-switcher">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('ms')">Malay</button>
+    </div>
+    <a href="index.html">
+      <img src="https://i.postimg.cc/1zjLbBx4/photo-2025-06-25-11-02-57.jpg" alt="Sound Library Logo" class="library-logo" />
+    </a>
+    <h1 data-en="Contact" data-ms="Hubungi">Contact</h1>
+    <nav>
+      <a href="index.html" data-en="Home" data-ms="Laman Utama">Home</a>
+      <a href="services.html" data-en="Services" data-ms="Perkhidmatan">Services</a>
+      <a href="activities.html" data-en="Activities" data-ms="Aktiviti">Activities</a>
+      <a href="technology.html" data-en="Technology" data-ms="Teknologi">Technology</a>
+      <a href="workshops.html" data-en="Workshops" data-ms="Bengkel">Workshops</a>
+      <a href="contact.html" class="active" data-en="Contact" data-ms="Hubungi">Contact</a>
+      <a href="donate.html" data-en="Donate" data-ms="Derma">Donate</a>
+      <a href="membership.html" data-en="Membership" data-ms="Keahlian">Membership</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 data-en="Contact Us" data-ms="Hubungi Kami">Contact Us</h2>
+    <p data-en="Have questions or feedback? Reach out to us below!"
+       data-ms="Ada soalan atau maklum balas? Hubungi kami di bawah!">
+      Have questions or feedback? Reach out to us below!
+    </p>
+
+      <form action="https://formspree.io/f/xovwyvoz" method="POST">
+      <label for="name" data-en="Name:" data-ms="Nama:">Name:</label>
+      <input type="text" id="name" name="name" required placeholder="John Doe" />
+
+      <label for="email" data-en="Email:" data-ms="E-mel:">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+      <label for="message" data-en="Message:" data-ms="Mesej:">Message:</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+
+      <button type="submit" data-en="Send Message" data-ms="Hantar Mesej">Send Message</button>
+    </form>
+
+    <h3 data-en="Contact Information" data-ms="Maklumat Perhubungan">Contact Information</h3>
+    <ul>
+      <li data-en="Phone: +603-1234 5678" data-ms="Telefon: +603-1234 5678">Phone: +603-1234 5678</li>
+      <li data-en="Email: info@soundlibrary.com" data-ms="E-mel: info@soundlibrary.com">Email: info@soundlibrary.com</li>
+      <li data-en="Address: 123 Audio Lane, Klang Valley, Malaysia"
+          data-ms="Alamat: 123 Lorong Audio, Lembah Klang, Malaysia">
+        Address: 123 Audio Lane, Klang Valley, Malaysia
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p data-en="&copy; 2025 Sound Library. All rights reserved."
+       data-ms="&copy; 2025 Perpustakaan Bunyi. Hak cipta terpelihara.">
+      &copy; 2025 Sound Library. All rights reserved.
+    </p>
+  </footer>
+</body>
+</html>
